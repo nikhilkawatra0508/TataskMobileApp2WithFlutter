@@ -1,0 +1,10 @@
+rootProject.name='TataskMobileApp2'
+include ':app'
+setBinding(new Binding([gradle: this]))
+evaluate(new File(
+  settingsDir,
+  '../flutter_tatasky_app/.android/include_flutter.groovy'
+))
+
+include ':flutter_tatasky_app'
+project(':flutter_tatasky_app').projectDir = new File('../flutter_tatasky_app')

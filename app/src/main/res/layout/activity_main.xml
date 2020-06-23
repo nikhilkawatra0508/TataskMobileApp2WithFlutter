@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+
+    android:background="@android:color/background_dark"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="75dp"
+        android:background="@drawable/white" />
+
+    <TextView
+        android:id="@+id/firstRow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:text="Login"
+        android:textColor="@android:color/primary_text_dark"
+        android:textFontWeight="550"
+        android:textSize="35sp"
+
+        android:textStyle="bold" />
+
+
+    <TextView
+
+        android:id="@+id/enterYourName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/firstRow"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="50dp"
+        android:text="Enter Your Mobile:"
+        android:textColor="@android:color/primary_text_dark"
+        android:textFontWeight="500"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/phoneNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/enterYourName"
+
+        android:layout_marginLeft="10dp"
+
+        android:layout_marginRight="10dp"
+        android:width="100dp"
+        android:background="@drawable/bottom_nav_bar_bg"
+
+
+        android:hint="12345678"
+        android:paddingLeft="20dp"
+        android:textColor="@android:color/primary_text_dark"
+        android:textColorHint="@android:color/darker_gray"
+        android:textFontWeight="500"
+        android:textSize="17sp" />
+
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/phoneNumber"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="49dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/group_3"
+        android:text="Next"
+
+        android:textColor="@android:color/background_light"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/loginButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="27dp"
+        android:text="Not on Tata Sky Binge ?"
+        android:textColor="@android:color/white"
+        android:textSize="18dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/loginButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:text="@string/SignUp"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="18dp" />
+
+
+</RelativeLayout>
