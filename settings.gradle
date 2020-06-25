@@ -7,4 +7,4 @@ evaluate(new File(
 ))
 
 include ':flutter_tatasky_app'
-project(':flutter_tatasky_app').projectDir = new File('/flutter_tatasky_app')
+project(':flutter_tatasky_app').projectDir = new File('flutter_tatasky_app')
