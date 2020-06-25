@@ -1,40 +1,21 @@
-# Automatically generated on 2020-05-21 UTC from https://codemagic.io/app/5ebbc6dfd5ac071c5ed077e4/settings
+# Automatically generated on 2020-05-19 UTC from https://codemagic.io/app/5ec3a9ca102001000b561777/settings
 # Note that this configuration is not an exact match to UI settings. Review and adjust as necessary.
-
 workflows:
   default-workflow:
-    name: Default Workflow
+    name: Native TataSky Workflow
     max_build_duration: 60
     environment:
       flutter: stable
       xcode: latest
       cocoapods: default
     scripts:
-     - |
-        # set up debug keystore
-        rm -f ~/.android/debug.keystore
-        cd android/app && keytool -genkeypair \
-          -alias androiddebugkey \
-          -keypass android \
-          -keystore debug.keystore \
-          -storepass android \
-          -dname 'CN=Android Debug,O=Android,C=US' \
-          -keyalg 'RSA' \
-          -keysize 2048 \
-          -validity 10000
-     - echo "sdk.dir=$HOME/programs/android-sdk-macosx" > "$FCI_BUILD_DIR/android/local.properties"
-     - npm install
-     - chmod +x android/gradlew
-     #- cd android && ./gradlew bundleDebug
-     - cd android && ./gradlew assembleDebug --no-daemon
-     # run simple JEST test on RN
-     - npm test
-     - 7z a -r test_results.zip coverage/*
+      - cd $FCI_BUILD_DIR
+      - pwd
+      - ./gradlew assembleDebug
     artifacts:
-     - android/app/build/outputs/**/**/*.apk
-     - android/app/build/outputs/**/**/*.aab
-     - /tmp/xcodebuild_logs/*.log 
-     - $FCI_BUILD_DIR/*.zip
+      - $FCI_BUILD_DIR/app/build/outputs/apk/debug/*.apk
+      - $FCI_BUILD_DIR/build/**/outputs/**/*.aab
+      - $FCI_BUILD_DIR/build/**/outputs/**/mapping.txt
     publishing:
       email:
         recipients:
