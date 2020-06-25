@@ -119,7 +119,7 @@ class _DashBoardHomePageState extends State<DashBoardHomePage> {
           ContinueWatchingVideoWidget(title: "Continue Watching",),
           SizedBox(height: 5.0),
           VerticalMovieWidge(
-              title: 'Show We Love',
+              title: 'Show We Love1',
               listMovieFlux: _movieBloc.listMoviesPopularFlux),
           SizedBox(height: 20.0),
 

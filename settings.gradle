@@ -3,7 +3,7 @@ include ':app'
 setBinding(new Binding([gradle: this]))
 evaluate(new File(
   settingsDir,
-  '/flutter_tatasky_app/.android/include_flutter.groovy'
+  'flutter_tatasky_app/.android/include_flutter.groovy'
 ))
 
 include ':flutter_tatasky_app'
